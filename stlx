@@ -1,0 +1,24 @@
+#! /bin/bash
+
+set -e
+
+# Obtain script location and follow symlinks
+SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
+
+THEME_NAMES=("Cyberpunk" "Ocean" "Everforest")
+
+THEME=$(gum choose "${THEME_NAMES[@]}" --header "Choose your theme" --height 9 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+
+[ ! -n "$THEME" ] && exit 0
+
+# Change Terminal theme
+cp $SCRIPT_DIR/themes/ghostty/$THEME ~/.config/ghostty/config
+
+# Change Neovim theme
+cp $SCRIPT_DIR/themes/neovim/$THEME.lua ~/.config/nvim/lua/theme.lua
+
+# Change background
+source $SCRIPT_DIR/themes/osx/$THEME.sh
+$SCRIPT_DIR/scripts/wallpaper.sh $SCRIPT_DIR/$BACKGROUND
+
+echo "Theme changed! Please restart your terminal for it to apply."
