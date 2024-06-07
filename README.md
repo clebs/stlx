@@ -5,7 +5,9 @@ Styles for OSX, stlx for short, is a theme switcher for MacOSX.
 This tool is currently an experiment and it has been tailored to my setup. That being said, I share it in hopes that it is useful for more people and to expand its features.
 
 ## Demo
-[![Watch the video](https://raw.githubusercontent.com/clebs/stlx/main/assets/thumbnail.png)](https://raw.githubusercontent.com/clebs/stlx/main/assets/stlx-demo.mp4)
+https://github.com/clebs/stlx/assets/1059661/b09790e9-b214-4b3a-9e55-f686477b41ee
+
+
 
 ## Details
 Stlx allows to choose between different themes and when selecting a theme it will apply the following:
