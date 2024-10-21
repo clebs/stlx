@@ -5,7 +5,7 @@ set -e
 # Obtain script location and follow symlinks
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
-THEME_NAMES=("Cyberpunk" "Tropical" "Everforest" "Nord")
+THEME_NAMES=("Cyberpunk" "Everforest" "Nord" "Rose-Pine" "Tropical" )
 
 THEME=$(gum choose "${THEME_NAMES[@]}" --header "Choose your theme" --height 9 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
