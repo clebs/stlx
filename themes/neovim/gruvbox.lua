@@ -9,6 +9,6 @@ cmd('autocmd ColorScheme * highlight NormalSB ctermbg=NONE guibg=NONE')
 
 require('gruvbox').setup({
 	transparent_mode = true,
-	contrast = "soft"
+	contrast = "hard"
 })
 cmd.colorscheme("gruvbox")
