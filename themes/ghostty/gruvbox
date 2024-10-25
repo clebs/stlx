@@ -14,4 +14,4 @@ font-family = FiraCode Nerd Font Mono
 cursor-style = block
 shell-integration-features = no-cursor
 
-theme = GruvboxDark
+theme = GruvboxDarkHard
