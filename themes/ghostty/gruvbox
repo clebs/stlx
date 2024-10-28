@@ -15,3 +15,10 @@ cursor-style = block
 shell-integration-features = no-cursor
 
 theme = GruvboxDarkHard
+
+# Key bindings
+keybind = shift+delete=esc:d
+keybind = shift+backspace=esc:^H
+keybind = shift+left=esc:b
+keybind = shift+right=esc:f
+keybind = "ctrl+shift+l=text:printf '\\e[2J\\e[3J\\e[H'\n"
