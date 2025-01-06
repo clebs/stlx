@@ -1,4 +1,4 @@
 #! /bin/bash
 
-BACKGROUND=themes/osx/wallpaper/nordic-mountains.png
+BACKGROUND=themes/osx/wallpaper/alpine-forest.jpeg
 
