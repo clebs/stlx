@@ -1,0 +1,32 @@
+# Theme
+title = "Ghostty 👻"
+window-decoration = false
+window-padding-x = 10
+window-padding-y = 10
+
+background-opacity = 0.93
+unfocused-split-opacity = 0.98
+cursor-invert-fg-bg = true
+theme=Solarized Dark Higher Contrast
+
+# Font
+font-family = FiraCode Nerd Font Mono
+
+# cursor
+cursor-style = block
+shell-integration-features = no-cursor
+
+# quick terminal
+quick-terminal-position = left
+keybind = global:cmd+period=toggle_quick_terminal
+
+# Key bindings
+keybind = shift+delete=esc:d
+keybind = shift+backspace=esc:^H
+keybind = shift+left=esc:b
+keybind = shift+right=esc:f
+keybind = "ctrl+shift+l=text:printf '\\e[2J\\e[3J\\e[H'\n"
+
+# unset alt+left/right so that tmux pane switch still works
+keybind = alt+left=unbind
+keybind = alt+right=unbind

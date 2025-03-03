@@ -6,6 +6,7 @@ window-padding-y = 10
 
 background-opacity = 0.90
 unfocused-split-opacity = 0.98
+theme = GruvboxDarkHard
 
 # Font
 font-family = FiraCode Nerd Font Mono
@@ -18,7 +19,6 @@ shell-integration-features = no-cursor
 quick-terminal-position = left
 keybind = global:cmd+period=toggle_quick_terminal
 
-theme = GruvboxDarkHard
 
 # Key bindings
 keybind = shift+delete=esc:d

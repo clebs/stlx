@@ -1,3 +1,3 @@
 #! /bin/bash
 
-BACKGROUND=themes/osx/wallpaper/forest-tops.png
+BACKGROUND=themes/osx/wallpaper/Sequoia-Sunrise.heic
