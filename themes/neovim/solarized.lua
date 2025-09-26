@@ -1,6 +1,8 @@
-require('NeoSolarized').setup({
-	style = "dark",
-	transparent = true,
-})
+require('solarized').setup {
+ transparent = {
+    enabled = true,
+		mason = false,
+	},
+}
 
-vim.cmd.colorscheme("NeoSolarized")
+vim.cmd.colorscheme("solarized")
