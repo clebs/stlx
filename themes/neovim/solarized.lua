@@ -1,8 +1,10 @@
 require('solarized').setup {
- transparent = {
-    enabled = true,
-		mason = false,
-	},
+   palette = "solarized",
+   variant = "autumn",
+   transparent = {
+      enabled = true,
+      mason = false,
+   },
 }
 
 vim.cmd.colorscheme("solarized")

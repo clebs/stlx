@@ -4,10 +4,9 @@ window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
 
-background-opacity = 0.90
+background-opacity = 0.95
 unfocused-split-opacity = 0.98
 cursor-invert-fg-bg = true
-theme=Solarized Dark Patched
 
 # Font
 font-family = FiraCode Nerd Font Mono
@@ -30,3 +29,41 @@ keybind = "ctrl+shift+l=text:printf '\\e[2J\\e[3J\\e[H'\n"
 # unset alt+left/right so that tmux pane switch still works
 keybind = alt+left=unbind
 keybind = alt+right=unbind
+
+# colors: normal first, bright second
+
+background = 002b36
+foreground = 849697
+
+# black
+palette = 0=073642
+palette = 8=002b36
+
+# red
+palette = 1=dc322f
+palette = 9=cb4b16
+
+# green
+palette = 2=859900
+palette = 10=586e75
+
+# yellow
+palette = 3=b58900
+palette = 11=657b83
+
+# blue
+palette = 4=268bd2
+palette = 12=839496
+
+# magenta
+palette = 5=d33682
+palette = 13=6c71c4
+
+# cyan
+palette = 6=2aa198
+palette = 14=93a1a1
+
+# white
+palette = 7=eee8d5
+palette = 15=fdf6e3
+
