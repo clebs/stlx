@@ -19,6 +19,8 @@ shell-integration-features = no-cursor
 quick-terminal-position = left
 keybind = global:cmd+period=toggle_quick_terminal
 
+# toggle background-opacity
+keybind = cmd+u=toggle_background_opacity
 
 # Key bindings
 keybind = shift+delete=esc:d
