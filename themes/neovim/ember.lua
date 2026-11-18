@@ -8,7 +8,15 @@ M.setup = function(opts)
 	opts = opts or {}
 	M.config = vim.tbl_deep_extend('force', M.config, opts)
 
+	-- vars and funcs
+	local hl = vim.api.nvim_set_hl
 	local transparent = M.config.transparent
+
+	-- Background helper for transparency
+	-- Sets either the given color or transparent ased on config.
+	local setTransparent = function(color)
+		return transparent and 'NONE' or color
+	end
 
 	-- Ember & Ash palette
 	local colors = {
@@ -51,19 +59,13 @@ M.setup = function(opts)
 	vim.o.background = 'dark'
 	vim.g.colors_name = 'ember-ash'
 
-	local hl = vim.api.nvim_set_hl
-
-	-- Background helper for transparency
-	local bg = function(color)
-		return transparent and 'NONE' or color
-	end
 
 	-- Editor UI
-	hl(0, 'Normal', { fg = colors.fg0, bg = bg(colors.bg0) })
-	hl(0, 'NormalFloat', { fg = colors.fg0, bg = bg(colors.bg1) })
-	hl(0, 'FloatBorder', { fg = colors.ember, bg = bg(colors.bg1) })
-	hl(0, 'SignColumn', { bg = bg(colors.bg0) })
-	hl(0, 'EndOfBuffer', { fg = bg(colors.bg0) })
+	hl(0, 'Normal', { fg = colors.fg0, bg = setTransparent(colors.bg0) })
+	hl(0, 'NormalFloat', { fg = colors.fg0, bg = setTransparent(colors.bg1) })
+	hl(0, 'FloatBorder', { fg = colors.ember, bg = setTransparent(colors.bg1) })
+	hl(0, 'SignColumn', { bg = setTransparent(colors.bg0) })
+	hl(0, 'EndOfBuffer', { fg = setTransparent(colors.bg0) })
 	hl(0, 'Cursor', { fg = colors.bg0, bg = colors.ember })
 	hl(0, 'CursorLine', { bg = colors.cursor_line })
 	hl(0, 'CursorLineNr', { fg = colors.fire_yellow, bold = true })
@@ -120,10 +122,10 @@ M.setup = function(opts)
 	hl(0, 'GreyDim', { fg = colors.bg5 })
 
 	-- NvimTree
-	hl(0, 'NvimTreeNormal', { fg = colors.fg0, bg = bg(colors.bg0) })
-	hl(0, 'NvimTreeNormalNC', { fg = colors.fg0, bg = bg(colors.bg0) })
-	hl(0, 'NvimTreeEndOfBuffer', { fg = bg(colors.bg0), bg = bg(colors.bg0) })
-	hl(0, 'NvimTreeVertSplit', { fg = colors.bg1, bg = bg(colors.bg0) })
+	hl(0, 'NvimTreeNormal', { fg = colors.fg0, bg = setTransparent(colors.bg0) })
+	hl(0, 'NvimTreeNormalNC', { fg = colors.fg0, bg = setTransparent(colors.bg0) })
+	hl(0, 'NvimTreeEndOfBuffer', { fg = setTransparent(colors.bg0), bg = setTransparent(colors.bg0) })
+	hl(0, 'NvimTreeVertSplit', { fg = colors.bg1, bg = setTransparent(colors.bg0) })
 	hl(0, 'NvimTreeCursorLine', { bg = colors.bg1 })
 	hl(0, 'NvimTreeSymlink', { link = 'Fg' })
 	hl(0, 'NvimTreeFolderName', { link = 'CharAmber' })
