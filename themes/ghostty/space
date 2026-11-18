@@ -4,7 +4,7 @@ window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
 
-background-opacity = 0.95
+background-opacity = 0.85
 unfocused-split-opacity = 0.98
 cursor-invert-fg-bg = true
 
@@ -35,38 +35,41 @@ keybind = alt+right=unbind
 
 # colors: normal first, bright second
 
-background = 002b36
-foreground = 849697
+background = 0a0f1a
+foreground = a8dfff
+
+# cursor
+cursor-color = 00ccff
+cursor-text = 0a0f1a
 
 # black
-palette = 0=073642
-palette = 8=002b36
+palette = 0=0d1b26
+palette = 8=123247
 
 # red
-palette = 1=dc322f
-palette = 9=cb4b16
+palette = 1=0099cc
+palette = 9=33ccff
 
 # green
-palette = 2=859900
-palette = 10=586e75
+palette = 2=00e0b8
+palette = 10=33ffdd
 
 # yellow
-palette = 3=b58900
-palette = 11=657b83
+palette = 3=33ccff
+palette = 11=66ddff
 
 # blue
-palette = 4=268bd2
-palette = 12=839496
+palette = 4=00aaff
+palette = 12=33bbff
 
 # magenta
-palette = 5=d33682
-palette = 13=6c71c4
+palette = 5=3399ff
+palette = 13=66b2ff
 
 # cyan
-palette = 6=2aa198
-palette = 14=93a1a1
+palette = 6=66e0ff
+palette = 14=99eeff
 
 # white
-palette = 7=eee8d5
-palette = 15=fdf6e3
-
+palette = 7=cceeff
+palette = 15=ffffff
