@@ -7,6 +7,9 @@ window-padding-y = 10
 background-opacity = 0.95
 unfocused-split-opacity = 0.98
 
+# Let tmux and other programs know if the theme is light or dark
+env = "COLORFGBG=15;0"
+
 # Font
 font-family = FiraCode Nerd Font Mono
 
