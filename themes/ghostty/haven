@@ -4,10 +4,7 @@ window-decoration = false
 window-padding-x = 10
 window-padding-y = 10
 
-#set theme as a light theme (fg is black and bg is white)
-env = COLORFGBG=0;15
-
-background-opacity = 0.80
+background-opacity = 0.85
 unfocused-split-opacity = 0.98
 cursor-invert-fg-bg = true
 

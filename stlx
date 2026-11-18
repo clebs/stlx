@@ -6,6 +6,8 @@ set -e
 SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 
 THEME_NAMES=("Catppuccin" "Cyberpunk" "Ember" "Everforest" "Gruvbox" "Haven" "Nord" "Rose-Pine" "Space" "Tropical")
+# assume themes are dark by default
+LIGHT_THEMES=("Haven")
 
 THEME=$(gum choose "${THEME_NAMES[@]}" --header "Choose your theme" --height 9 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
 
@@ -20,5 +22,12 @@ cp "$SCRIPT_DIR/themes/neovim/$THEME.lua" ~/.config/nvim/lua/theme.lua
 # Change background
 source "$SCRIPT_DIR/themes/osx/$THEME.sh"
 "$SCRIPT_DIR/scripts/wallpaper.sh" "$SCRIPT_DIR/$BACKGROUND"
+
+# Set tmux env to inform if theme is light or dark
+if [[ " ${LIGHT_THEMES[*]} " == *" $THEME "* ]]; then
+	tmux set-environment -g COLORFGBG "0;15"
+else
+	tmux set-environment -g COLORFGBG "15;0"
+fi
 
 echo "Theme changed! Please restart your terminal for it to apply."
